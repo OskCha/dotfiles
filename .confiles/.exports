@@ -17,3 +17,10 @@ export LESS_TERMCAP_md="$ORANGE"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -RFX"
+
+# android SDK & NDK
+export ANDROID_SDK=/usr/local/opt/android-sdk
+export ANDROID_NDK=/usr/local/opt/android-ndk
+
+export ANDROID_HOME=$ANDROID_SDK
+export NDK=$ANDROID_NDK
