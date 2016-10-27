@@ -134,3 +134,5 @@
 [push]
   default=simple
 
+[hub]
+  host = github.int.midasplayer.com
