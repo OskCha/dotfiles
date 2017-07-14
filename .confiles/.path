@@ -1,6 +1,9 @@
 # default path
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
+# Add ruby environment
+PATH=$HOME/.rbenv/bin:$PATH
+
 # Add `~/bin` to the `$PATH`
 PATH=$HOME/bin:$PATH
 

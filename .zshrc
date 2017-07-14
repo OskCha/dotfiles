@@ -67,3 +67,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 RPROMPT='$(battery_pct_prompt)'
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
