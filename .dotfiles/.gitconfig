@@ -1,6 +1,6 @@
 [user]
-  name = Ricardo Amores
-  email = rickyah@gmail.com
+  name = Oscar Chavarria
+  email = oscar.chavarria@king.com
 
 [color]
   ui = true
@@ -39,8 +39,8 @@
   autocrlf = input 
   pager = less -x1,5
 
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[difftool "BeyondCompare"]
+  cmd = bcomp \"$LOCAL\" \"$REMOTE\"
   path = 
 
 [mergetool "sourcetree"]
@@ -94,12 +94,12 @@
   # tags
   t = tag -l
   # stashes
-  st = stash
-  stl = stash list
-  stp = stash pop
-  sts = "!f() { git stash show stash@{$1}; }; f"
-  std = "!f() { git stash show stash@{$1} -U5; }; f"
-  strm = "!f() { git stash drop stash@{$1} -U5; }; f"
+  # st = stash
+  #stl = stash list
+  #stp = stash pop
+  #sts = "!f() { git stash show stash@{$1}; }; f"
+  #std = "!f() { git stash show stash@{$1} -U5; }; f"
+  #strm = "!f() { git stash drop stash@{$1} -U5; }; f"
   #commits
   c = commit
   cm = commit -m

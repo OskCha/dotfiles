@@ -73,3 +73,6 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
+#export PROMPT="\$(git-radar --zsh)"
+#export PROMPT="$PROMPT$(git-radar --zsh --fetch)"

@@ -4,6 +4,9 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # Add ruby environment
 PATH=$HOME/.rbenv/bin:$PATH
 
+# Add dotfiles to environment
+PATH=$HOME/repos/dotfiles:$PATH
+
 # Add `~/bin` to the `$PATH`
 PATH=$HOME/bin:$PATH
 
