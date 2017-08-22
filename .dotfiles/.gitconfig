@@ -34,7 +34,7 @@
 
 [core]
   excludesfile = ~/.global_gitignore
-  editor = subl -w
+  editor = code -r
   mergeoptions = --no-ff --no-commit
   autocrlf = input 
   pager = less -x1,5
@@ -74,12 +74,18 @@
        }; \
   f"
 
+  # submodule fetch && master && update
+  smfu = "!f() { git submodule foreach --recursive 'git fetch -p && git co master && git pull'; }; f"
+
+  #say = "!f() { msg=${1-Hello World}; echo $msg;  }; f"
+
   #branch management
   b = branch
   ba = branch -a
   bd = branch -d
   bdr = branch -d --remote
   bfd = branch -D
+  bdlr = "!f() { name=${1-branch name}; git branch -d $name; git branch -d --remote $name; }; f"
   bm = branch -m
   re = remote
   rea = remote -v
@@ -121,6 +127,8 @@
   l = "!f() { git log $1 --pretty=format:'%Cred%h%Creset %<(75,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset %n%-d' --abbrev-commit;}; f"
   # log oneline showing graph
   lg = "!f() { git log $1 --graph --pretty=format:'%Cred%h%Creset - %<(52,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
+  # log oneline showing graph
+  lg1 = "!f() { git log $1 --graph --oneline --decorate --pretty=format:'%Cred%h%Creset - %<(52,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit;};f"
   # show tracked branches
   tracked = "!d() { git for-each-ref --format='%(refname:short)' refs/heads/ | while read b; do if r=$(git config --get branch.$b.remote); then m=$(git config --get branch.$b.merge); echo \"$b -> $r/${m##*/}\"; fi; done } ; d"
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state

@@ -70,9 +70,8 @@ RPROMPT='$(battery_pct_prompt)'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+    prompt_segment black default "%(!.%{%F{orange}%}.)$USER"
   fi
 }
 export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
-#export PROMPT="\$(git-radar --zsh)"
-#export PROMPT="$PROMPT$(git-radar --zsh --fetch)"
+
