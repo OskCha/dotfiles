@@ -77,7 +77,7 @@
   # submodule fetch && master && update
   smfu = "!f() { git submodule foreach --recursive 'git fetch -p && git co master && git pull'; }; f"
 
-  #say = "!f() { msg=${1-Hello World}; echo $msg;  }; f"
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 
   #branch management
   b = branch
@@ -85,7 +85,7 @@
   bd = branch -d
   bdr = branch -d --remote
   bfd = branch -D
-  bdlr = "!f() { name=${1-branch name}; git branch -d $name; git branch -d --remote $name; }; f"
+  bdlr = "!f() { name=${1-branch name}; git branch -d $name; git branch -d --remote origin/$name; }; f"
   bm = branch -m
   re = remote
   rea = remote -v
