@@ -74,4 +74,3 @@ prompt_context() {
   fi
 }
 export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
-

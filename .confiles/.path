@@ -10,6 +10,16 @@ PATH=$HOME/repos/dotfiles:$PATH
 # Add `~/bin` to the `$PATH`
 PATH=$HOME/bin:$PATH
 
+#Android
+ANDROID_SDK=/Users/oscarchavarria/DevLibs/sdk
+ANDROID_TOOLS=$ANDROID_SDK/tools
+ANDROID_PLATFORM_TOOLS=$ANDROID_SDK/platform-tools
+ANDROID_PLATFORM_BUILD_TOOLS=$ANDROID_SDK/build-tools/23.0.3
+
+PATH=$ANDROID_TOOLS:$PATH
+PATH=$ANDROID_PLATFORM_TOOLS:$PATH
+PATH=$ANDROID_PLATFORM_BUILD_TOOLS:$PATH
+
 # If there is bin folder in the current location, it takes preference
 PATH=./bin:$PATH
 

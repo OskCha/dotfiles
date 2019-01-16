@@ -24,10 +24,6 @@
   changed = yellow
   untracked = cyan
 
-[merge]
-  # Include summaries of merged commits in newly created merge commit messages
-  log = true
-
 [svn]
   # push empty directory removals back to svn as directory deletes
   rmdir = true
@@ -37,15 +33,22 @@
   editor = code -r
   mergeoptions = --no-ff --no-commit
   autocrlf = input 
-  pager = less -x1,5
+  pager = "diff-so-fancy|less -FX"
 
 [difftool "BeyondCompare"]
   cmd = bcomp \"$LOCAL\" \"$REMOTE\"
   path = 
 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[merge]
+  tool = bcomp 
+   # Include summaries of merged commits in newly created merge commit messages
+  log = true
+
+[mergetool]
+  prompt = false
+[mergetool "bcomp"]
   trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 
 [apply]
   # Detect whitespace errors when applying a patch
