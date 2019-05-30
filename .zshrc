@@ -73,4 +73,7 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{orange}%}.)$USER"
   fi
 }
+
+export GIT_RADAR_FORMAT="[%{remote}-%{local}][%{changes}] %{stash}"
+
 export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
