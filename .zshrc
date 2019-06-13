@@ -77,3 +77,14 @@ prompt_context() {
 export GIT_RADAR_FORMAT="[%{remote}-%{local}][%{changes}] %{stash}"
 
 export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
+
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export FZF_DEFAULT_OPTS='--height 40% --border'
+
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
