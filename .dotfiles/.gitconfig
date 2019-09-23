@@ -139,8 +139,10 @@
   #show changes
   wc = whatchanged -p --abbrev-commit --pretty=medium
   r = reset
+  rh = reset --hard
   rhh = reset HEAD --hard
   dc = diff --cached
+  cp = cherry-pick
 
 [push]
   default=simple

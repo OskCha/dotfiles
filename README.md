@@ -1,4 +1,4 @@
-# Ricky’s dotfiles
+# Oscar’s dotfiles
 ### Based on [Mathias’s dotfiles](https://github.com/OskCha/dotfiles)
 
 
