@@ -19,9 +19,10 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -RFX"
 
 #android NDK
-export NDK='/Users/oscarchavarria/DevLibs/android-ndk-r16b'
-export ANDROID_NDK='/Users/oscarchavarria/DevLibs/android-ndk-r16b'
-export ANDROID_SDK='/Users/oscarchavarria/DevLibs/sdk'  
-export ANDROID_HOME='/Users/oscarchavarria/DevLibs/sdk' 
+export NDK='/Users/oscarchavarria/Library/Android/sdk/ndk-bundle'
+export ANDROID_NDK='/Users/oscarchavarria/Library/Android/sdk/ndk-bundle'
+export ANDROID_SDK='/Users/oscarchavarria/Library/Android/sdk'  
+export ANDROID_SDK_ROOT='/Users/oscarchavarria/Library/Android/sdk'  
+export ANDROID_HOME='/Users/oscarchavarria/Library/Android/sdk' 
 
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home' 
