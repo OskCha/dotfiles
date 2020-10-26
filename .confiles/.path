@@ -10,6 +10,9 @@ PATH=$HOME/repos/dotfiles:$PATH
 # Add `~/bin` to the `$PATH`
 PATH=$HOME/bin:$PATH
 
+#add python to env
+PATH=/Users/oscarchavarria/Library/Python/3.7/bin:$PATH
+
 #Android
 ANDROID_SDK=/Users/oscarchavarria/DevLibs/sdk
 ANDROID_TOOLS=$ANDROID_SDK/tools

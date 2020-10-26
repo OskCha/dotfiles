@@ -143,6 +143,8 @@
   rhh = reset HEAD --hard
   dc = diff --cached
   cp = cherry-pick
+  #list all conflicts
+  con = diff --name-only --diff-filter=U  
 
 [push]
   default=simple
